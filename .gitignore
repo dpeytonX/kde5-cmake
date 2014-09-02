@@ -1,0 +1,8 @@
+CMakeCache.txt
+CMakeFiles
+Makefil
+Makefile
+cmake_install.cmake
+sample.h
+**/*.swp
+**/*.depends
