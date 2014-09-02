@@ -1,4 +1,4 @@
-#include <project.h>
+#include <sample.h>
 
 #include <KDeclarative/QmlObject>
 

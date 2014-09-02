@@ -6,3 +6,5 @@ cmake_install.cmake
 sample.h
 **/*.swp
 **/*.depends
+qrc_qml.cpp
+sample
