@@ -1,4 +1,5 @@
 <!DOCTYPE RCC><RCC version="1.0">
-<qresource>
+<qresource prefix="/qml/qt5">
+ <file alias="main.qml">qml/main.qml</file>
 </qresource>
 </RCC>

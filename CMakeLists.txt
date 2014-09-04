@@ -6,6 +6,10 @@ cmake_minimum_required (VERSION 2.8.11)
 set_property (GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
+#If you include plasma uncomment these two lines
+#find_package(ECM REQUIRED NO_MODULE)
+#set(CMAKE_MODULE_PATH ${ECM_KDE_MODULE_DIR})
+
 #Qt requirements
 find_package (Qt5Core REQUIRED)
 get_target_property (QtCore_location Qt5::Core LOCATION)
@@ -17,6 +21,13 @@ find_package (Qt5Quick REQUIRED)
 get_target_property (QtQuick_location Qt5::Quick LOCATION)
 find_package (KF5Declarative REQUIRED)
 get_target_property(KDeclarative_location KF5::Declarative LOCATION)
+#If you see cannot find ECMConfig.cmake install
+#project-neon5-extra-cmake-modules
+#
+#find_package (KF5Plasma REQUIRED)
+#get_target_property(Plasma_location KF5::Plasma LOCATION)
+#find_package (KF5PlasmaQuick REQUIRED)
+#get_target_property(PlasmaQuick_location KF5::PlasmaQuick LOCATION)
 
 
 set (sample_VERSION_MAJOR 1)
@@ -55,6 +66,8 @@ target_link_libraries (${project_name} Qt5::Gui)
 target_link_libraries (${project_name} Qt5::Qml)
 target_link_libraries (${project_name} Qt5::Quick)
 target_link_libraries (${project_name} KF5::Declarative)
+#target_link_libraries (${project_name} KF5::Plasma)
+#target_link_libraries (${project_name} KF5::PlasmaQuick)
 
 
 #testing
