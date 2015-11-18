@@ -1,6 +1,6 @@
-project (sample)
+project (%{APPNAME})
 
-set (project_name sample)
+set (project_name %{APPNAMELC})
 
 cmake_minimum_required (VERSION 2.8.11)
 set_property (GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
@@ -19,8 +19,8 @@ find_package (Qt5Qml REQUIRED)
 get_target_property (QtQml_location Qt5::Qml LOCATION)
 find_package (Qt5Quick REQUIRED)
 get_target_property (QtQuick_location Qt5::Quick LOCATION)
-find_package (KF5Declarative REQUIRED)
-get_target_property(KDeclarative_location KF5::Declarative LOCATION)
+#find_package (KF5Declarative REQUIRED)
+#get_target_property(KDeclarative_location KF5::Declarative LOCATION)
 #If you see cannot find ECMConfig.cmake install
 #project-neon5-extra-cmake-modules
 #
@@ -30,8 +30,8 @@ get_target_property(KDeclarative_location KF5::Declarative LOCATION)
 #get_target_property(PlasmaQuick_location KF5::PlasmaQuick LOCATION)
 
 
-set (sample_VERSION_MAJOR 1)
-set (sample_VERSION_MINOR 0)
+set (%{APPNAME}_VERSION_MAJOR 1)
+set (%{APPNAME}_VERSION_MINOR 0)
 
 set (PROJECT_SOURCE_DIR "src/main")
 set (PROJECT_RESOURCE_DIR "src/main/resources")
@@ -65,7 +65,7 @@ target_link_libraries (${project_name} Qt5::Core)
 target_link_libraries (${project_name} Qt5::Gui)
 target_link_libraries (${project_name} Qt5::Qml)
 target_link_libraries (${project_name} Qt5::Quick)
-target_link_libraries (${project_name} KF5::Declarative)
+#target_link_libraries (${project_name} KF5::Declarative)
 #target_link_libraries (${project_name} KF5::Plasma)
 #target_link_libraries (${project_name} KF5::PlasmaQuick)
 

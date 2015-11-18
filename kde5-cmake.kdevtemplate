@@ -1,0 +1,6 @@
+# KDE Config File
+[General]
+Name=KDE5-CMake
+Comment=KF5 CMake Gui application. Generate a KF5/Qt based GUI application
+ShowFilesAfterGeneration=%{PROJECTDIR}/src/main/main.cpp
+Category=KF5
